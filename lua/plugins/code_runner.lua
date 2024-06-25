@@ -45,7 +45,12 @@ return {
         border_hl = "FloatBorder",
         float_hl = "Normal",
         -- transparency (see :h winblend)
-        blend = 30,
+        -- blend = 30,
+        winblend = 3,
+        highlights = {
+          border = "Normal",
+          background = "Normal",
+        },
       },
     })
   end,

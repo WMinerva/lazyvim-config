@@ -19,9 +19,9 @@ return {
     priority = 1000,
     config = function()
       require("rose-pine").setup({
-        --   styles = {
-        --     transparency = true,
-        --   },
+        -- styles = {
+        --   transparency = true,
+        -- },
       })
     end,
   },
