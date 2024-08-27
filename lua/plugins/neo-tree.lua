@@ -3,7 +3,7 @@ return {
   config = function()
     require("neo-tree").setup({
       window = {
-        -- position = "float",
+        position = "right",
         -- popup_border_style = "rounded",
       },
     })

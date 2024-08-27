@@ -28,16 +28,22 @@ return {
   {
     "navarasu/onedark.nvim",
     lazy = true,
-    opts = {
-      style = "darker",
-    },
+    config = function()
+      require("onedark").setup({
+        style = "darker",
+        transparent = true,
+        lualine = {
+          transparent = true, -- lualine center bar transparency
+        },
+      })
+    end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "onedark",
-      -- colorscheme = "rose-pine-moon",
-      colorscheme = "everforest",
+      colorscheme = "rose-pine-moon",
+      -- colorscheme = "everforest",
     },
   },
 }

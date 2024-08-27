@@ -4,22 +4,13 @@ return {
     "nvim-telescope/telescope-file-browser.nvim",
   },
   keys = {
-    -- {
-    --   "<Leader>e",
-    --   false,
-    -- },
     {
       "<Leader>d",
       -- ":Telescope file_browser path=%:p:h<cr>",
       function()
         require("telescope").extensions.file_browser.file_browser({
-          -- cwd = vim.fn.expand("%:p:h"),
           path = "%:p:h",
           select_buffer = true,
-          layout_config = {
-            prompt_position = "top",
-          },
-          sorting_strategy = "ascending",
           initial_mode = "normal",
           -- border = false,
         })
@@ -28,20 +19,23 @@ return {
     },
   },
   config = function()
-    -- require("telescope").setup {
-    --   layout_config = {
-    --     horizontal = {
-    --       width_padding = 0.1,
-    --       height_padding = 0.1,
-    --       preview_width = 0.6,
-    --     },
-    --     vertical = {
-    --       width_padding = 0.05,
-    --       height_padding = 1,
-    --       preview_height = 0.5,
-    --     },
-    --   },
-    -- }
+    require("telescope").setup({
+      -- dofile(vim.g.base46_cache .. "telescope"),
+      defaults = {
+        prompt_prefix = "   ",
+        selection_caret = " ",
+        entry_prefix = " ",
+        sorting_strategy = "ascending",
+        layout_config = {
+          horizontal = {
+            prompt_position = "top",
+            preview_width = 0.55,
+          },
+          width = 0.87,
+          height = 0.80,
+        },
+      },
+    })
     require("telescope").load_extension("file_browser")
   end,
 }
