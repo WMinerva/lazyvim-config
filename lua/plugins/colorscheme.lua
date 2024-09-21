@@ -8,7 +8,7 @@ return {
     priority = 1000, -- make sure to load this before all the other start plugins
     config = function()
       require("everforest").setup({
-        transparent_background_level = 1,
+        -- transparent_background_level = 1,
       })
     end,
   },
@@ -30,20 +30,20 @@ return {
     lazy = true,
     config = function()
       require("onedark").setup({
-        style = "darker",
-        transparent = true,
-        lualine = {
-          transparent = true, -- lualine center bar transparency
-        },
+        -- style = "darker",
+        -- transparent = true,
+        -- lualine = {
+        --   transparent = true, -- lualine center bar transparency
+        -- },
       })
     end,
   },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      -- colorscheme = "onedark",
-      colorscheme = "rose-pine-moon",
-      -- colorscheme = "everforest",
-    },
-  },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = {
+  --     -- colorscheme = "onedark",
+  --     -- colorscheme = "rose-pine-moon",
+  --     colorscheme = "everforest",
+  --   },
+  -- },
 }
