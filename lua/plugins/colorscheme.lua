@@ -38,12 +38,12 @@ return {
       })
     end,
   },
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     -- colorscheme = "onedark",
-  --     -- colorscheme = "rose-pine-moon",
-  --     colorscheme = "everforest",
-  --   },
-  -- },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      -- colorscheme = "onedark",
+      -- colorscheme = "rose-pine-moon",
+      colorscheme = "everforest",
+    },
+  },
 }
